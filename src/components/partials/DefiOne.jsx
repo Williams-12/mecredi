@@ -3,11 +3,10 @@ import React, { useState } from 'react';
 const DefiOne = () => {    
   const [nom, setNom] = useState('');
   const [nomSoumis, setNomSoumis] = useState('');
-
   const body = (event) => {
     setNom(event.target.value);
       };
-
+    
   const submit = (event) => {
     event.preventDefault();
     setNomSoumis(nom)
@@ -18,9 +17,9 @@ const DefiOne = () => {
       <h2 className="mb-4">Formulaire</h2>
       <form onSubmit={submit}>
         <div className="mb-3">
-        <input
+         <input
           type="text"
-          className="form-control"
+      className="form-control"
           placeholder="Entrez votre nom"
           value={nom}
           onChange={body}
